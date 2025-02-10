@@ -1,0 +1,64 @@
+{
+  "manifest_version": 3,
+  "name": "Extension",
+  "version": "0.0.1",
+  "description": "a Chrome extension",
+  "key": "thisisthekey",
+  "homepage_url": "https://domain.com",
+  "action": {
+    "default_icon": "./assets/icon.png",
+    "default_popup": "./dist/popup/index.html"
+  },
+  "update_url": "https://domain.com/release/updates.xml",
+  "options_ui": {
+    "page": "./dist/options/index.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "./dist/background/index.mjs"
+  },
+  "icons": {
+    "16": "./assets/icon.png",
+    "48": "./assets/icon.png",
+    "128": "./assets/icon.png"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "activeTab",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://pagetoinject.com/index*"
+      ],
+      "js": [
+        "dist/contentScripts/index.global.js"
+      ],
+      "css": [
+        "dist/contentScripts/extension.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "dist/contentScripts/extension.css",
+        "assets/injected.js"
+      ],
+      "matches": [
+        "https://pagedomain.com/*"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "side_panel": {
+    "default_path": "dist/sidepanel/index.html"
+  }
+}
