@@ -10,7 +10,7 @@ export const injectWhitelist: Inject[] = [
 ]
 // allow access to network requests
 export const netWorkList = [
-  'https://pagedomain.com/*',
+  'https://www.baidu.com/*',
   // 'http://localhost:3839/*',
 ]
 
@@ -18,7 +18,7 @@ export const netWorkList = [
 export const pathList = [
   {
     name: 'the page to inject',
-    path: 'https://pagetoinject.com/index*',
+    path: 'https://www.baidu.com/*',
   },
 ]
 // 注入的页面路径

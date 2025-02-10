@@ -2,16 +2,27 @@
 
 A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template.
 
-<p align="center">
-<sub>Popup</sub><br/>
-<img width="655" src="https://user-images.githubusercontent.com/11247099/126741643-813b3773-17ff-4281-9737-f319e00feddc.png"><br/>
-<sub>Options Page</sub><br/>
-<img width="655" src="https://user-images.githubusercontent.com/11247099/126741653-43125b62-6578-4452-83a7-bee19be2eaa2.png"><br/>
-<sub>Inject Vue App into the Content Script</sub><br/>
-<img src="https://user-images.githubusercontent.com/11247099/130695439-52418cf0-e186-4085-8e19-23fe808a274e.png">
-</p>
+### popup login
+![image](screenshots/login.jpg)
+
+### popup after login
+![image](screenshots/after.jpg)
+
+### options & sidebar page
+![image](screenshots/options.jpg)
+
+### update page
+![image](screenshots/update.jpg)
 
 ## Features
+
+- 增加监听页面上的接口请求
+- 增加 vite-plugin-vue-layouts, unplugin-vue-router 可以在popup弹窗中使用页面跳转
+- 全局变量、方法、组件，vue页面中无需再import任何东西
+- 内置element-plus组件及图标集（使用方法 class='i-ep-xxx'）
+- 集成Alovajs 自动管理请求
+- 全局请求方法get、post等，可直接使用
+- 增加 unplugin-vue-components 自动导入组件
 
 - ⚡️ **Instant HMR** - use **Vite** on dev (no more refresh!)
 - 🥝 Vue 3 - Composition API, [`<script setup>` syntax](https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md) and more!

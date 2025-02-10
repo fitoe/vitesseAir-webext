@@ -41,7 +41,15 @@ const { x, y, style } = useDraggable(toolbarel, {
 </script>
 
 <template>
-  <div ref="toolbarel" :style="style" :class="[started ? 'cursor-move' : '', storePosition.y === 0 ? 'b-t-none rounded-t-none' : 'rounded-t-lg']" class="fixed shadow transition-shadow duration-100 z-2001 flex items-center gap-x-3 b b-white rounded-b-lg  bg-white bg-opacity-10 px-2 py-1 text-sm text-black  backdrop-blur backdrop-blur ">
-    toolbar
+  <div ref="toolbarel" :style="style" :class="[started ? 'cursor-move' : '', storePosition.y === 0 ? 'b-t-none rounded-t-none' : 'rounded-t-lg']" class="fixed shadow transition-shadow duration-100 z-2001 b b-white rounded-b-lg  bg-white bg-opacity-10 px-2 py-1 text-sm text-black  backdrop-blur backdrop-blur ">
+    <div class="text-xl">
+      extension toolbar
+    </div>
+    <div class="text-gradient from-cyan-500 to-blue-500">
+      with unocss styles
+    </div>
+    <div class="text-gray">
+      can be draggable
+    </div>
   </div>
 </template>

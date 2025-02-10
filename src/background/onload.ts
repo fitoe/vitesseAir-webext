@@ -9,7 +9,7 @@ const getVersion = useDebounceFn(() => {
     system.value = json
   }).catch((error) => {
     system.value = {
-      version: '0.0.0',
+      version: '1.0.1',
       status: 'error',
       remark: 'system maintenance',
     }

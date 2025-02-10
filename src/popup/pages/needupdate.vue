@@ -5,7 +5,7 @@
   <div class="w-52 py-5 px-4 bg-gradient-to-b space-y-5 from-white to-blue-50 rounded-lg">
     <div class="text-center">
       <div class="text-xl text-sky-500 font-bold">
-        需要升级
+        Need Update
       </div>
     </div>
     <div class="flex-center gap-x-2">
@@ -19,13 +19,13 @@
     </div>
     <div class="text-center">
       <div class="text-sm">
-        软件进行了功能更新
+        Software updated
       </div>
     </div>
     <div class="text-center">
       <a :href="downloadPage" target="_blank">
         <el-button type="primary">
-          立即升级
+          Update Now
         </el-button>
       </a>
     </div>
@@ -34,5 +34,5 @@
 
 <route lang='yaml'>
 meta:
-  title: '需要升级'
+  title: 'Need Update'
 </route>
